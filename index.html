@@ -145,7 +145,6 @@
     <div class="animated-modal hidden quote-content" id="animatedModal">
         <!--Heading-->
         <div class="heading-area pb-2 mx-570">
-            <span class="sub-title">Nous sommes w00t</span>
             <h2 class="title mt-2">Donec at erat <span class="alt-color js-rotating">Vivamus, maximus, tellus</span></h2>
         </div>
         <!--Contact Form-->
@@ -947,6 +946,40 @@
 <!-- custom script -->
 <script src="vendor/js/contact_us.js"></script>
 <script src="js/script.js"></script>
+<script type="text/javascript">
+    // 
+    $(document).ready(function()
+    {
+        var contactUri = "";
+        $("#contact-form #submit_btn").on('click', function()
+        {
+            console.log("contact_form", $("#contact-form").serialize());
+        });
 
+        $("#modal-contact-form-data #quote_submit_btn").on('click', function()
+        {
+            console.log("contact_form", $("#modal-contact-form-data").serialize());
+        });
+
+
+        // $("#submit").on('click', function(){
+        //     // send ajax
+        //     $.ajax({
+        //         url: contactUri, // url where to submit the request
+        //         type : "POST", // type of action POST || GET
+        //         dataType : 'json', // data type
+        //         data : $("#modal-contact-form-data").serialize(), // post data || get data
+        //         success : function(result) {
+        //             // you can see the result from the console
+        //             // tab of the developer tools
+        //             console.log(result);
+        //         },
+        //         error: function(xhr, resp, text) {
+        //             console.log(xhr, resp, text);
+        //         }
+        //     })
+        // });
+    });
+</script>
 </body>
 </html>
